@@ -1,0 +1,63 @@
+@import "compass"
+@import "mixins.css.sass"
+@import "icons/*.png"
+@mixin im($val)
+	@include icons-sprite($val)
+
+// Global styles
+BODY
+A
+	+transition(color 0.3s ease)
+	+link-colors(#000, #5d5d5d)
+
+
+/* Layout
+.app810
+	width: 810px
+	margin: 0 auto
+	padding-bottom: 90px
+	position: relative
+	background: #7AACB5 url(../images/back.jpg) no-repeat 0 0
+	overflow-x: hidden
+
+/* Header
+HEADER
+
+/* Footer
+FOOTER
+
+// BRICKS
+/* Cols
+.g-cols
+	overflow: hidden
+	.cols-i
+		float: left
+
+
+
+// ELEMENTS
+/* Small elements
+
+/* Buttons
+.g-btn
+	display: block
+
+
+// INDEX
+/* Styles for index page
+
+// OTHER BLOCKS
+
+/* Popup styled
+.g-popup
+	position: relative
+	.close
+		position: absolute
+		top: -35px
+		right: 16px
+		+wh(19px,19px)
+		+im(close)
+		cursor: pointer
+	.body
+		position: relative
+		+oz

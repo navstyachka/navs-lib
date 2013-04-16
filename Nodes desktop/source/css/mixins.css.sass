@@ -1,0 +1,53 @@
+@mixin fz($f, $z)
+	font-size: $f
+	line-height: $z
+
+@mixin wh($w, $h)
+	width: $w
+	height: $h
+
+@mixin oz
+	overflow: hidden
+	zoom: 1
+
+@mixin abs
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+// Fonts
+@mixin helv-norm
+	font-family: 'HelveticaNeueLTStd Roman', Arial, Helvetica, sans-serif
+	-webkit-font-smoothing: antialiased
+@mixin bold
+	font-family: 'Stag-Black', Arial, Helvetica, sans-serif
+	text-transform: uppercase
+	-webkit-font-smoothing: antialiased
+
+// Colors
+// Main text color
+$m-color: #D02E40
+$m2-color: #069ABD
+$m3-color: #1B1B1B
+// Background-color
+$b-color: #fff
+
+// Links with hovers
+.gray_link
+	color: #646464
+	&:hover
+		color: lighten(#646464, 30%)
+.white_link
+	color: #fff
+	&:hover
+		color: #ddd
+.black_link
+	color: #000
+	&:hover
+		color: lighten(#000, 50%)
+
+
+
+

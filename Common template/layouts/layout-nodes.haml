@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Index 1
+    %meta{:content => "", :name => "author"}/
+    %meta{:content => "", :name => "keywords"}/
+    %meta{:content => "", :name => "description"}/
+    %meta{:content => "True", :name => "HandheldFriendly"}/
+    %meta{:content => "810", :name => "MobileOptimized"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "telephone=no", :name => "format-detection"}/
+    %meta{:content => "on", "http-equiv" => "cleartype"}/
+    %meta{:content => "on", "http-equiv" => "x-dns-prefetch-control"}/
+    %link{:href => "//ajax.googleapis.com", :rel => "dns-prefetch"}/
+    %link{:href => "shared/css/FBPopup.css", :rel => "stylesheet"}/
+    %link#font-css{:href => "theme/css/font.css", :rel => "stylesheet"}/
+    %link{:href => "theme/css/styles.css", :rel => "stylesheet"}/
+    %link{:href => "theme/css/mobile.css", :media => "only screen and (max-device-width: 1024px)", :rel => "stylesheet"}/
+    %script{:src => "theme/js/libs/modernizr.min.js"}
+  /[if lt IE 8] <body class="ie ie7">
+  /[if IE 8] <body class="ie ie8">
+  /[if IE 9] <body class="ie ie9">
+  / [if !IE]><!
+  %body
+    / <![endif]
+    .app.app810
+      .container
+        %header
+        %div
+        %footer
+    #fb-root
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<script src="theme/js/libs/jquery.min.js"><\/script>')    /[if IE] <script src="theme/js/libs/PIE.js"></script>
+    %script{:src => "shared/js/nodes.js"}
+    %script{:src => "shared/js/FBUser.js"}
+    %script{:src => "shared/js/FBPopup.js"}
+    %script{:src => "theme/js/app.js"}
