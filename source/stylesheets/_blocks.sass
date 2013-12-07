@@ -1,0 +1,42 @@
+/* Blocks
+/* Breadcrumbs
+.g-breadcrumbs
+	margin-bottom: 3px
+	A, SPAN
+		+fz(11px,11px)
+		text-transform: uppercase
+	A
+		position: relative
+		padding-right: 16px
+		&:after
+			content: ' '
+			display: block
+			position: absolute
+			top: 5px
+			right: 7px
+			+wh(3px,5px)
+			@extend .arrow_pagination
+	SPAN
+		color: #FFF
+
+
+/* Pagination
+.g-pagination
+	text-align: center
+	A
+		margin: 0 4px
+		+fz(18px,18px)
+		text-decoration: none
+		color: #8F9FA7
+		&.current
+			color: #D30000
+			&:hover
+				color: #D30000
+		&:hover
+			color: darken(#8F9FA7, 20%)
+.g-pagination__prev, .g-pagination__next
+	display: inline-block
+	+wh(7px,11px)
+	&:hover
+		+opacity(0.6)
+
