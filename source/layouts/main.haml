@@ -1,28 +1,27 @@
 = partial "layouts/doctype"
 
 %head
-	-# Meta tags
-	= partial "layouts/meta"
-	-# Page title
-	%title= current_page.data.title
-	-# Stylesheets
-	= javascript_include_tag "vendor/modernizr-2.6.1.min"
-	= stylesheet_link_tag "application"
-	-# Application icons
-	= partial "layouts/icons"
+  -# Meta tags
+  = partial "layouts/meta"
+  -# Page title
+  %title= current_page.data.title
+  -# Stylesheets
+  = stylesheet_link_tag "application"
+  -# Application icons
+  = partial "layouts/icons"
 
 %body{ class: current_page.data.classes || "" }
-	.g-page
-		.g-page__i
-			.g-content
-				= partial "elements/header"
-				.g-content__i
-					= yield
-				= partial "elements/footer"
+  .g-page
+    = partial "elements/header"
+    .g-content
+      = yield
+    = partial "elements/footer"
 
-	-# JavaScripts
-	= javascript_include_tag "http://code.jquery.com/jquery.min.js"
-	= javascript_include_tag "application"
+  = partial "elements/popup"
+
+  -# JavaScripts
+  = javascript_include_tag "http://code.jquery.com/jquery.min.js"
+  = javascript_include_tag "application"
 
 -# Need this to close the doctype partial
 </html>

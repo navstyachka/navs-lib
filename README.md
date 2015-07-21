@@ -1,4 +1,0 @@
-navs-lib
-========
-
-Components library

@@ -1,0 +1,28 @@
+$icons: sprite-map("icons/*.png", $layout: smart)
+$icons-2x: sprite-map("icons-2x/*.png", $layout: smart)
+
+@mixin icon($sprite)
+  background-image: sprite-url($icons)
+  background-position: sprite-position($icons, $sprite)
+  background-repeat: no-repeat
+  display: inline-block
+  height: image-height(sprite-file($icons, $sprite))
+  width: image-width(sprite-file($icons, $sprite))
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) 
+    background-image: sprite-url($icons-2x)
+    background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2)
+    background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2)
+  
+
+// Is used when we need only to change image on action like hover, etc.
+@mixin icon_($sprite)
+  background-position: sprite-position($icons, $sprite)
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)
+    background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2)
+
+// Mixin for positioning icon to be in the centre
+@mixin icon_centre($sprite)
+  margin-top: -(image-height(sprite-file($icons, $sprite)) / 2)
+  margin-left: -(image-height(sprite-file($icons, $sprite)) / 2)

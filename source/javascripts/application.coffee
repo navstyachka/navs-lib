@@ -2,8 +2,5 @@
 # Application
 #------------------------------------------------------------------------
 
-#= require_tree ./vendor
-#= require_tree ./shared
 #= require      ./_main
-#= require      ./_plugins
 

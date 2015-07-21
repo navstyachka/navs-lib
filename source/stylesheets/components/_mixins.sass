@@ -17,6 +17,7 @@
 		display: table
 	&:after
 		clear: both
+
 @mixin abs
 	position: absolute
 	top: 0
@@ -25,13 +26,11 @@
 	left: 0
 
 @mixin light
-	font-family: 'custom-light-webfont', 'Myriad Pro',Arial, sans-serif
+	font-weight: 300
+
 @mixin regular
-	font-family: 'custom-regular-webfont', 'Myriad Pro', Arial, sans-serif
-@mixin semi-bold
-	font-family: 'custom-semibold-webfont', 'Myriad Pro', Arial, sans-serif
+	font-weight: 400
+
 @mixin bold
-	font-family: 'custom-bold-webfont', 'Myriad Pro', Arial, sans-serif
-@mixin italic
-	font-family: 'custom-it-webfont', 'Myriad Pro', Arial, sans-serif
+	font-weight: 600
 

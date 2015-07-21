@@ -1,38 +1,38 @@
+@mixin layout
+  min-width: 320px
+  max-width: 1400px
+  margin: 0 auto
+  +box-sizing(border-box)
+
+
 /* Global styles
 BODY
-	font: 15px/23px Arial, Helvetica, sans-serif
-INPUT, TEXTAREA
-	outline: none
-A
-	color: $m-color
-	+transition(all ease 0.3s)
-	&:hover
-		color: $m-color-l
-P
-	margin-bottom: 25px
-	+fz(16px,24px)
 
+.g-page
+
+INPUT, TEXTAREA
+  outline: none
+  -webkit-appearance: none
+A
+  text-decoration: none
+  +transition(color ease 0.3s)
 
 /* Header
 HEADER
-	position: relative
-	height: 90px
-.header__logo, .header__nav, .header__phone, .header__search
-	position: absolute
-.header__logo
-	top: 15px
-	left: 0
-	+oz
-.header__logo__img
-	display: block
+
 
 /* Footer
 FOOTER
+  +layout
+
+
 
 /* Layout
 .g-page
-	min-width: 1024px
-	background: #FFF
-.g-content
-.g-content__i
-	padding-bottom: 15px
+  position: relative
+  overflow: hidden
+  +layout
+
+
+/* Sections
+

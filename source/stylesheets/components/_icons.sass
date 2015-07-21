@@ -1,22 +1,35 @@
-@import "elements/*.png"
-@mixin elements($val)
-	@include elements-sprite($val)
-
-
+/*
 /* Icons
+/*
+
 .icon
-	display: block
-.icon_search
-	+wh(23px,30px)
-	//+elements(search)
+  display: inline-block
 
-//@for $i from 1 through 8
-//	.icon_#{$i}
-//		$icon-pos: icon-#{$i}
-//		+icon($icon-pos)
+//$icon-hover-set: image
+//$simple-icon-set: image
 //
+//@each $icon in $simple-icon-set
+//  .#{$icon}
+//    +icon($icon)
+//
+//
+//@each $type in $icon-hover-set
+//  .#{$type}
+//    &:before
+//      content: ''
+//      +icon($type)
+//      cursor: pointer
+//
+//    &.active, &:hover:not(.disabled)
+//      &:before
+//        +icon_(#{$type}_hover)
 
+  //.centered.#{$type}
+  //  &:before
+  //    +icon_centre($type)
 
-
-
-
+//.centered
+//  &:before
+//    position: absolute
+//    top: 50%
+//    left: 50%
