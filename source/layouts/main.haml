@@ -1,28 +1,23 @@
-= partial "layouts/doctype"
+!!! 5
+  %head
+    -# Meta tags
+    = partial "layouts/meta"
+    -# Page title
+    %title= current_page.data.title
+    -# Stylesheets
+    = stylesheet_link_tag "application"
+    -# Application icons
+    = partial "layouts/icons"
 
-%head
-  -# Meta tags
-  = partial "layouts/meta"
-  -# Page title
-  %title= current_page.data.title
-  -# Stylesheets
-  = stylesheet_link_tag "application"
-  -# Application icons
-  = partial "layouts/icons"
+  %body{ class: current_page.data.classes || "" }
+    .g-page
+      = partial "elements/header"
+      .g-content
+        = yield
+      = partial "elements/footer"
 
-%body{ class: current_page.data.classes || "" }
-  .g-page
-    = partial "elements/header"
-    .g-content
-      = yield
-    = partial "elements/footer"
+    = partial "elements/popup"
 
-  = partial "elements/popup"
-
-  -# JavaScripts
-  = javascript_include_tag "http://code.jquery.com/jquery.min.js"
-  = javascript_include_tag "application"
-
--# Need this to close the doctype partial
-</html>
-
+    -# JavaScripts
+    = javascript_include_tag "http://code.jquery.com/jquery.min.js"
+    = javascript_include_tag "application"
