@@ -1,0 +1,54 @@
+$tiny-mobile:        "(max-width: 420px)"
+$mobile:             "(max-width: 749px)"
+$tablet-mobile:      "(max-width: 1024px)"
+$tablet:             "(min-width: 750px) and (max-width: 1024px)"
+$desktop:            "(min-width: 1025px)"
+$large-desktop:      "(min-width: 1440px)"
+//$tablet-portrait:    "(min-width: 768px) and (max-width: 1024px) and (orientation : portrait)"
+//$tablet-landscape:   "(min-width: 768px) and (max-width: 1024px) and (orientation : landscape)"
+
+@mixin respond-to($media)
+  $breakpoint: ''
+
+  @if $media == tiny-mobile
+    $breakpoint: $tiny-mobile
+
+  @else if $media == mobile
+    $breakpoint: $mobile
+
+  @else if $media == tablet-mobile
+    $breakpoint: $tablet-mobile
+
+  @else if $media == tablet
+    $breakpoint: $tablet
+
+  @else if $media == desktop
+    $breakpoint: $desktop
+
+  @else if $media == large-desktop
+    $breakpoint: $large-desktop
+
+  @else
+    $breakpoint: $desktop
+
+  @media only screen and #{$breakpoint}
+    @content
+
+.mq-mob, .mq-tab, .mq-desk, .mq-tab-mob
+  display: none
+
++respond-to(mobile)
+  .mq-mob
+    display: block
+
++respond-to(tablet-mobile)
+  .mq-tab-mob
+    display: block
+
++respond-to(tablet)
+  .mq-tab
+    display: block
+
++respond-to(desktop)
+  .mq-desk
+    display: block
